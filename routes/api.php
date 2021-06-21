@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//penerapan route untuk ujicoba di postman
+Route::get('/institution', 'InstitutionController@index');
+Route::post('/institution', 'InstitutionController@create');
+Route::put('/institution/{id}', 'InstitutionController@update');
+Route::delete('/institution/{id}', 'InstitutionController@delete');
